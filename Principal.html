@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./Disenio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+        <title>Caballo</title>
+    </head>
+    <body>
+
+        <main id="Tablero">
+          <div class="Bloque"><span></span></div>
+              <div class="Bloque"><span>a</span></div>
+              <div class="Bloque"><span>b</span></div>
+              <div class="Bloque"><span>c</span></div>
+              <div class="Bloque"><span>d</span></div>
+              <div class="Bloque"><span>e</span></div>
+              <div class="Bloque"><span></span></div>
+
+              <div class="fila">
+                <div class="Bloque"><span>5</span></div>
+
+                <div id = "b04" onclick="CheckBloque(0,4)" class="Bloque Claro">
+                    <span id="tor_n1"></span>
+                </div>
+                <div id = "b14" onclick="CheckBloque(1,4)" class="Bloque Oscuro">
+                    <span id="cab_n1"></span>
+                </div>
+                <div id = "b24" onclick="CheckBloque(2,4)"  class="Bloque Claro">
+                    <span id="alf_n1"></span>
+                </div>
+                <div id = "b34" onclick="CheckBloque(3,4)"  class="Bloque Oscuro">
+                    <span id="reina_n"></span>
+                </div>
+                <div id = "b44" onclick="CheckBloque(4,4)"  class="Bloque Claro">
+                    <span id="rey_n"></span>
+                </div>
+                <div class="Bloque"><span>5</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>4</span></div>
+                             
+                <div id="b03" onclick="CheckBloque(0,3)"  class="Bloque Oscuro">
+                    <span id="pe_n1"></span>
+                </div>
+                    
+                <div id="b13" onclick="CheckBloque(1,3)"  class="Bloque Claro">
+                 <span id="pe_b1">&#x2659;</span>
+                </div>
+                <div id="b23" onclick="CheckBloque(2,3)"  class="Bloque Oscuro">
+                    <span id="pe_n3"></span>
+                </div>
+                    
+                <div id="b33" onclick="CheckBloque(3,3)"  class="Bloque Claro">
+                    <span id="pe_n4"></span>
+                </div>
+                <div id="b43" onclick="CheckBloque(4,3)"  class="Bloque Oscuro">
+                    <span id="pe_n5"></span>
+                </div>
+                <div class="Bloque"><span>4</span></div>
+            </div> 
+            <div class="fila">
+                <div class="Bloque"><span>3</span></div>
+
+                <div id="b02" onclick="CheckBloque(0,2)"  class="Bloque Claro">
+                </div>
+                <div id="b12" onclick="CheckBloque(1,2)" class="Bloque Oscuro">
+                </div>
+
+                </div>
+                <div id="b22" onclick="CheckBloque(2,2)" typeof="buttom" class="Bloque Claro">
+                  <span>&#x265E;</span>
+                </div>
+                <div id="b32" onclick="CheckBloque(3,2)" class="Bloque Oscuro">
+                </div>
+                <div id="b42" onclick="CheckBloque(4,2)"  class="Bloque Claro">
+                </div>
+                <div class="Bloque"><span>3</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>2</span></div>
+                             
+                <div id="b01" onclick="CheckBloque(0,1)"  class="Bloque Oscuro">
+                </div>
+                <div id="b11" onclick="CheckBloque(1,1)"  class="Bloque Claro">
+                </div>
+                <div id="b21" onclick="CheckBloque(2,1)"  class="Bloque Oscuro">
+                </div>
+                <div id="b31" onclick="CheckBloque(3,1)"  class="Bloque Claro">
+                </div>
+                <div id="b41" onclick="CheckBloque(4,1)"  class="Bloque Oscuro">
+                </div>
+                <div class="Bloque"><span>2</span></div>
+            </div>
+            <div class="fila">
+                <div class="Bloque"><span>1</span></div>
+
+                <div id="b00" onclick="CheckBloque(0,0)"  class="Bloque Claro">
+                </div>
+                <div id="b10" onclick="CheckBloque(1,0)"  class="Bloque Oscuro">
+                </div>
+                <div id="b20" onclick="CheckBloque(2,0)"  class="Bloque Claro">
+                </div>
+                <div id="b30" onclick="CheckBloque(3,0)" class="Bloque Oscuro">
+
+                </div>
+                <div id="b40" onclick="CheckBloque(4,0)" class="Bloque Claro">
+                </div>
+                <div class="Bloque"><span>1</span></div>
+            </div>
+            <div class="Bloque"><span></span></div>
+                <div class="Bloque"><span>a</span></div>
+              <div class="Bloque"><span>b</span></div>
+              <div class="Bloque"><span>c</span></div>
+              <div class="Bloque"><span>d</span></div>
+              <div class="Bloque"><span>e</span></div>
+              <div class="Bloque"><span></span></div>
+
+        </main>
+        <script type="text/javascript" src="./Plays.js"></script>
+        <script type="text/javascript" src="./Movimientos.js"></script>
+    </body>
+</html>
