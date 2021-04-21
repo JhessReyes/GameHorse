@@ -32,6 +32,7 @@ body{
 .Bloque{
     border-color: transparent;
     border-style: dotted;
+    border-width: 0.4rem;
     min-width: 80px;
     min-height: 80px;
     padding: 0.5px;
