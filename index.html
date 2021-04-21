@@ -7,13 +7,16 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
         <title>Caballo</title>
+
     </head>
 
     <body>
-        <div style="position: fixed; left: 300px; display:flex; border: 1rem; width: 150px; height: 70px;">
-            <input style="width: 150px; height: 70px;" id="btn" type="button" onclick="play()" value="Reiniciar"/>
+        <div class="banner" style="float:right;">
+            <input style="width: 170px; height: 60px;" id="btn" type="button" onclick="play()" value="Reiniciar"/>
         </div>
-        <main id="TAB">
+        <div id="TAB"> 
+
+        <main  id="TABLERO" >
                 <div class="Bloque"><span></span></div>
                 <div class="Bloque"><span>a</span></div>
                 <div class="Bloque"><span>b</span></div>
@@ -127,7 +130,12 @@
               <div class="Bloque"><span></span></div>
 
         </main>
+
+    </div>
+
         <script type="text/javascript" src="./Plays.js"></script>
         <script type="text/javascript" src="./Movimientos.js"></script>
+        
+
     </body>
 </html>
