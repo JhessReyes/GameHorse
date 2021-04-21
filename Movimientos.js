@@ -10,6 +10,8 @@ var cronometro;
 var board = new Array(5);
 function Matriz(){
     for(let i=0;i<5;i++) board[i] = new Array(5);
+  clearTablero();
+  deselect(0,0);
     BloqueOcupadoCaballo();
 }
 
@@ -20,10 +22,14 @@ function BloqueOcupadoCaballo(){
         }
     }
     board[2][2]=2;
+    PaintBlacksHorses(2,2);
     board[1][3]=1;
+    PintarPeonBlanco(1,3);
 }
 
 function mapeo(x,y){
+var p_x=0;
+var p_y=0;
     for(i=0; i<5; i++){
         for(j=0; j<5; j++){
             dif_x = i - x; /*DIFERENCIA EJE X DEL ACTUAL Y EL ANTERIOR */
@@ -31,15 +37,23 @@ function mapeo(x,y){
             if(((dif_x*dif_x) + (dif_y*dif_y) ==5)){
                 valor = document.getElementById("b"+i+j).innerText;
                 if(valor=="♙"){
-                    bloqueselec_x = x;
-                    bloqueselec_y = y;
-                    CheckBlackHorse(i,j);
                     PintarBloque(i,j,"red");
+                    p_x = i;
+                    p_y = j;
                 }else{
                     PintarBloque(i,j,"black");
                 }
+                
             }
         }
+    }
+    valor = document.getElementById("b"+p_x+p_y).innerText;
+    if(valor=="♙"){
+        mano=false;
+        board[bloqueselec_x][bloqueselec_y]=0;
+        board[p_x][p_y] = 2; 
+        PaintBlacksHorses(p_x,p_y); 
+        eliminarpieza(bloqueselec_x,bloqueselec_y);
     }
 }
 
@@ -54,9 +68,8 @@ function play(){
 
 
 function CheckBlackHorse(x,y){
-    
-    checktrue=false;
         if(valor == "♞" && mano==false && board[x][y] == 2){ /*SI ES UN CABALLO NEGRO, EXISTE UNA PIEZA Y NO SE HA AGARRADO */
+            deselect(x,y);
             mano=true; 
             bloqueselec_x = x;
             bloqueselec_y = y;
@@ -67,15 +80,14 @@ function CheckBlackHorse(x,y){
             dif_y = y - bloqueselec_y; /*DIFERENCIA EJE Y DEL ACTUAL Y EL ANTERIOR */
             b = document.getElementById("b"+bloqueselec_x+bloqueselec_y).innerText;
             if(b == "♞" ){
-                if(((dif_x*dif_x) + (dif_y*dif_y) ==5)) checktrue = true;
-                if(checktrue){
+                if(((dif_x*dif_x) + (dif_y*dif_y) ==5)){
                     mano=false;
                     board[bloqueselec_x][bloqueselec_y]=0;
                     board[x][y] = 2; 
                     PaintBlacksHorses(x,y); 
                     eliminarpieza(bloqueselec_x,bloqueselec_y);
                     deselect(x,y);
-                }
+                }else deselect(x,y);
             }
         }
 }
@@ -93,11 +105,11 @@ function CheckPeonBlanco(x,y){
                 mano=false;
                 board[bloqueselec_x][bloqueselec_y]=0;
                 board[x][y] = 1; 
-                PintarPeonBlanco(x,y); 
                 eliminarpieza(bloqueselec_x,bloqueselec_y);
+                PintarPeonBlanco(x,y); 
                 deselect(x,y);
             }
-        }
+        }else if (mano == true && board[x][y] == 2) deselect(x,y); 
 }       
 
 function deselect(x,y){ 
@@ -108,6 +120,14 @@ function deselect(x,y){
         }
     }
 }/*Funcion para deseleccionar el borde*/
+
+function clearTablero() {
+    for(x=0; x<5; x++){
+        for(y=0; y<5; y++){
+            eliminarpieza(x,y);
+        }
+    }
+}
 
 function eliminarpieza(bloqueselec_x,bloqueselec_y){ 
         valor = document.getElementById("b"+bloqueselec_x+bloqueselec_y);

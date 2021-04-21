@@ -16,7 +16,7 @@ body{
     width: 100vh auto;
     height: 100vh auto;
 }
-#tab{
+#Tablero{
     display: flex;
     margin: 0.5vh;
     justify-content: center;
@@ -38,14 +38,6 @@ body{
     width: 0 auto;
     height: 0 auto;
 }
-.banner{
-    margin: 3px;
-    display: flex;
-    width: 0 auto;
-    height: 80px;
-    background-color: orange;
-    border-radius: 10px;
-}
 .container1{
     font-size: larger;
     display: flex;
@@ -54,20 +46,11 @@ body{
     justify-content: left;
     justify-items: left;
 }
-.container2{
-    font-size: larger;
-    display: flex;
-    padding-left: 8rem;
-    padding-right: 4rem;
-    justify-content: right;
-    justify-items: right;
-}
-
 .Bloque{
     border-color: transparent;
     border-style: solid;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     padding: 0.5px;
     float: left;
     text-align: center;
@@ -97,13 +80,34 @@ body{
     border-style: outset;
 }
 
-#footer{
-    display: flex;
-    justify-content: center;
-    border-radius: 0.5cm;
-    width: 0 auto ;
-    height: 0 auto;
-    background: rgb(148, 147, 147);;
-    font-family: 'Amatic SC', cursive;
-    font-size: x-small;
+
+#btn{
+    color: #0099CC;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+}
+
+#btn{
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+}
+
+#btn{
+      padding: 8px 16px;
+      text-align: center;
+      display: inline-block;
+      font-size: 10px;
+      margin: 2px 2px;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+}
+
+#btn:hover{
+    background-color: #008CBA;
+    color: white;
 }
