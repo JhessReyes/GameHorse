@@ -11,11 +11,18 @@
     </head>
 
     <body>
-        <div class="banner" style="float:right;">
-            <input style="width: 170px; height: 60px;" id="btn" type="button" onclick="play()" value="Reiniciar"/>
+        <div class="banner" style="float:right; margin-block-end: 2rem;">
+            <input style="width: 170px; height: 80px;" class="btn" type="button" onclick="play()" value="Reiniciar"/>
+          
+            <div style="float:right;" style="font-size: xxx-large; width: 170px; height: 100px;" class="Bloque Inicial"
+            id="b55" onclick="Insert(5,5)">
+                <span></span>
+            </div> 
+              <div style="float: right; width: 250px;">
+                <p id="cronometro"><h2><span id="minut">00</span>:<span id="segun">00</span></h2></p>
+            </div>
         </div>
-        <div id="TAB"> 
-
+        <div id="TAB">
         <main  id="TABLERO" >
                 <div class="Bloque"><span></span></div>
                 <div class="Bloque"><span>a</span></div>

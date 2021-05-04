@@ -51,6 +51,18 @@ body{
     cursor: cell;
     background-color:transparent;
 }
+.Inicial{
+    cursor: cell;
+    color: #0099CC;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+}
+
+.Inicial:hover{
+    background-color: #008CBA;
+    color: white;
+}
 
 .Oscuro:hover{
     border-color: floralwhite;
@@ -65,20 +77,20 @@ body{
 }
 
 
-#btn{
+.btn{
     color: #0099CC;
     background: transparent;
     border: 2px solid #0099CC;
     border-radius: 6px;
 }
 
-#btn{
+.btn{
         background-color: white; 
         color: black; 
         border: 2px solid #008CBA;
 }
 
-#btn{
+.btn{
     font-family: 'Amatic SC', cursive;
       padding: 8px 16px;
       text-align: center;
@@ -92,7 +104,7 @@ body{
       text-transform: uppercase;
 }
 
-#btn:hover{
+.btn:hover{
     background-color: #008CBA;
     color: white;
 }
